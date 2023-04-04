@@ -1,0 +1,241 @@
+/* fonts  */
+@font-face {
+  font-family: "Raleway-regular";
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "Raleway-medium";
+  src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: "Raleway-bold";
+  src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: "Raleway-extrabold";
+  src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Raleway-semibold";
+  src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Raleway-black";
+  src: url(../fonts/Raleway-Black.ttf);
+}
+
+/* colors  */
+
+:root {
+  --primary: #eebf00;
+  --secondary: #232b38;
+  --ternary: #6c6c6c;
+  --danger: #fe4545;
+  --pure: #fefefe;
+  --light: #f0f0f0;
+  --heaven: #ffffff;
+  --footer: #2d333f;
+}
+
+/* Reset  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Raleway-regular";
+}
+
+.container {
+  width: 100%;
+  padding: o 15px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+header.topbar {
+  background-color: var(--secondary);
+  padding: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--pure);
+  font-family: "Raleway-semibold";
+}
+
+.topbar .icon a {
+  margin-right: 0.6rem;
+}
+.topbar .auth {
+  display: flex;
+  color: var(--pure);
+}
+
+.auth .divider {
+  display: block;
+  margin: 0 1rem;
+}
+
+.auth > div a {
+  color: var(--pure);
+  font-size: 16px;
+  margin-left: 0.35rem;
+}
+
+nav .top {
+  padding: 1.5rem 0;
+}
+
+nav .top .contact h5,
+nav .top .time h5 {
+  font-family: "Raleway-black";
+  margin-bottom: 0.25rem;
+}
+nav .top .contact h6,
+nav .top .time h6 {
+  font-family: "Raleway-medium";
+  letter-spacing: 0.055rem;
+  font-size: 0.75rem;
+  color: var(--ternary);
+}
+nav .top .contact img,
+nav .top .time img {
+  margin-right: 1rem;
+}
+nav .main-nav {
+  position: relative;
+  background-color: var(--heaven);
+}
+nav .main-nav a {
+  color: var(--secondary);
+  font-family: "Raleway-semibold";
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+}
+nav .main-nav a:hover {
+  background-color: #eebf00;
+  color: var(--pure);
+}
+nav .main-nav a.active {
+  background-color: var(--primary);
+  color: var(--pure);
+}
+
+.main-nav::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 60px;
+  width: 100%;
+  background-image: url(./icons/shadow.svg);
+  background-position: center;
+  bottom: -22px;
+  z-index: -1;
+}
+
+/* Hero */
+.hero {
+  background-image: url(./images/hero.png);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  overflow: hidden;
+}
+.hero .container {
+  position: relative;
+}
+.hero .welcome {
+  margin-bottom: 0.25rem;
+}
+.hero .welcome span {
+  font-family: "Raleway-bold";
+  color: var(--secondary);
+  margin-right: 0.75rem;
+}
+.hero p {
+  font-family: "Raleway-medium";
+  width: 50%;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  font-family: "Raleway-extrabold";
+  color: var(--secondary);
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.hero h1 span {
+  color: var(--primary);
+}
+
+.hero .hero-image {
+  position: absolute;
+  right: 40px;
+  top: -40px;
+}
+.btn {
+  padding: 0.75rem 0.75rem;
+  border-radius: 4px;
+  line-height: 0.8;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--heaven);
+}
+.btn-primary:hover {
+  background: var(--heaven);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--heaven);
+}
+.btn-secondary:hover {
+  background: var(--heaven);
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
